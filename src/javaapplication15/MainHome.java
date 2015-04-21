@@ -276,7 +276,7 @@ public  void stop(){
      String nombre = JOptionPane.showInputDialog("Nombre:");
      try {
     Connection conn=DriverManager.getConnection(
-                        "jdbc:ucanaccess://C:\\Users\\Miguel\\Documents\\NetBeansProjects\\Finger\\src\\javaapplication15\\lector.mdb");
+                        "jdbc:ucanaccess://lector.mdb");
                 Statement s = conn.createStatement();
                 PreparedStatement ps=conn.prepareStatement("INSERT INTO Alumnos(Nombre, huella) VALUES (?,?)");
                     ;
@@ -304,7 +304,7 @@ public  void stop(){
         String tipo="";
        //Obtiene todas las huellas de la bd
           Connection conn=DriverManager.getConnection(
-                    "jdbc:ucanaccess://C:\\Users\\Miguel\\Documents\\NetBeansProjects\\Finger\\src\\javaapplication15\\lector.mdb");
+                    "jdbc:ucanaccess://lector.mdb");
             Statement s = conn.createStatement();
             ResultSet rs = s.executeQuery("SELECT * FROM  Alumnos");
 

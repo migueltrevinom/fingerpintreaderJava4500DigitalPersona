@@ -473,7 +473,7 @@ public  void stop(){
      try {
          fecharegistro=dateFormat.format(date);
     Connection conn=DriverManager.getConnection(
-                        "jdbc:ucanaccess://C:\\Users\\Miguel\\Documents\\NetBeansProjects\\Finger\\src\\javaapplication15\\lector.mdb");
+                        "jdbc:ucanaccess://lector.mdb");
                 Statement s = conn.createStatement();
                 PreparedStatement ps=conn.prepareStatement("INSERT INTO Alumnos(Nombre, huella, Apellido, Semestre, tipo, Matricula,hora) VALUES (?,?,?,?,?,?,?)");
                     
